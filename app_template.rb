@@ -89,6 +89,9 @@ application  do
   }
 end
 
+# set Japanese locale
+run 'wget https://raw.github.com/emuy/rails-i18n/master/rails/locale/ja.yml -P config/locales/'
+
 # HAML 
 run 'rake haml:replace_erbs'
 
