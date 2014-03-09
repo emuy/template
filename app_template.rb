@@ -125,6 +125,42 @@ insert_into_file 'app/views/layouts/application.html.haml',%(
 # Simple Form
 generate 'simple_form:install --bootstrap'
 
+# Rspec/Spring/Guard
+# ----------------------------------------------------------------
+# Rspec
+generate 'rspec:install'
+run "echo '--color --drb -f d' > .rspec"
+
+insert_into_file 'spec/spec_helper.rb',%(
+  config.before :suite do
+    DatabaseRewinder.clean_all
+  end
+
+  config.after :each do
+    DatabaseRewinder.clean
+  end
+
+  config.before :all do
+    FactoryGirl.reload
+    FactoryGirl.factories.clear
+    FactoryGirl.sequences.clear
+    FactoryGirl.find_definitions
+  end
+
+  config.include FactoryGirl::Syntax::Methods
+), after: 'RSpec.configure do |config|'
+
+insert_into_file 'spec/spec_helper.rb', "\nrequire 'factory_girl_rails'", after: "require 'rspec/rails'"
+gsub_file 'spec/spec_helper.rb', "require 'rspec/autorun'", ''
+
+# Spring
+run 'wget https://raw.github.com/jonleighton/spring/master/bin/spring -P bin/'
+run 'sudo chmod a+x bin/spring'
+
+# Guard
+run 'bundle exec guard init'
+gsub_file 'Guardfile', 'guard :rspec do', "guard :rspec, cmd: 'spring rspec -f doc' do"
+
 # set .gitignore
 run 'rm .gitignore'
 run 'wget https://raw.github.com/emuy/template/master/.gitignore'
