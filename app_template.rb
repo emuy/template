@@ -1,6 +1,10 @@
 # アプリ名の取得
 @app_name = app_name
 
+# .gitignore
+run 'gibo OSX Ruby Rails JetBrains SASS SublimeText > .gitignore' rescue nil
+gsub_file '.gitignore', /^config\/initializers\/secret_token.rb$/, ''
+
 # add to Gemfile
 append_file 'Gemfile', <<-CODE
 
