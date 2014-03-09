@@ -1,6 +1,9 @@
 # アプリ名の取得
 @app_name = app_name
 
+# add to Gemfile
+append_file 'Gemfile', <<-CODE
+
 # turbolinks support
 gem 'jquery-turbolinks'
 
