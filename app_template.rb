@@ -6,3 +6,7 @@ gem 'jquery-turbolinks'
 
 # CSS Support
 gem 'less-rails'
+CODE
+
+# install gems
+run 'bundle install'
