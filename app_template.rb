@@ -7,6 +7,9 @@ append_file 'Gemfile', <<-CODE
 # turbolinks support
 gem 'jquery-turbolinks'
 
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+gem 'therubyracer', platforms: :ruby
+
 # CSS Support
 gem 'less-rails'
 
