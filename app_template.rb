@@ -20,7 +20,6 @@ gem 'simple_form'
 
 gem 'twitter-bootstrap-rails'
 
-
 group :development do
   # Converter erb => haml
   gem 'erb2haml'
@@ -88,3 +87,13 @@ end
 
 # HAML 
 run 'rake haml:replace_erbs'
+
+# Bootstrap/Bootswach/Font-Awaresome
+insert_into_file 'app/views/layouts/application.html.haml',%(
+%script{:src=>'//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js'}
+%link{:href=>'//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', :rel=>'stylesheet'}
+%link{:href=>'//netdna.bootstrapcdn.com/bootswatch/3.0.3/simplex/bootstrap.min.css', :rel=>'stylesheet'}
+), after: '= csrf_meta_tags'
+
+# Simple Form
+generate 'simple_form:install --bootstrap'
