@@ -8,6 +8,7 @@ append_file 'Gemfile', <<-CODE
 gem 'jquery-turbolinks'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+# use twitter-bootstrap-rails
 gem 'therubyracer', platforms: :ruby
 
 # CSS Support
