@@ -104,3 +104,7 @@ insert_into_file 'app/views/layouts/application.html.haml',%(
 
 # Simple Form
 generate 'simple_form:install --bootstrap'
+
+# set .gitignore
+run 'rm .gitignore'
+run 'wget https://raw.github.com/emuy/template/master/.gitignore -P'
