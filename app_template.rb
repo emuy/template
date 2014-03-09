@@ -108,3 +108,9 @@ generate 'simple_form:install --bootstrap'
 # set .gitignore
 run 'rm .gitignore'
 run 'wget https://raw.github.com/emuy/template/master/.gitignore'
+
+# git init
+# ----------------------------------------------------------------
+git :init
+git :add => '.'
+git :commit => "-a -m 'first commit'"
