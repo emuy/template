@@ -17,12 +17,18 @@ gem 'less-rails'
 # Haml
 gem 'haml-rails'
 
+# Assets log cleaner
+gem 'quiet_assets'
+
 # Pagenation
 gem 'kaminari'
 
 gem 'simple_form'
 
 gem 'twitter-bootstrap-rails'
+
+# HTML5 Validator
+gem 'html5_validators'
 
 group :development do
   # Converter erb => haml
@@ -48,6 +54,20 @@ group :development, :test do
 
   # pryの色付けをしてくれる
   gem 'awesome_print'
+
+  # Rspec
+  gem 'rspec-rails'
+  gem 'rake_shared_context'
+
+  # fixtureの代わり
+  gem "factory_girl_rails"
+
+  # テスト環境のテーブルをきれいにする
+  gem 'database_rewinder'
+
+  # Guard
+  gem 'guard-rspec'
+  gem 'guard-spring'
 
 end
 
