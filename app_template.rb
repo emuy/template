@@ -237,6 +237,19 @@ run 'wget https://raw.github.com/emuy/template/master/.ruby-version'
 run 'rm .gitignore'
 run 'wget https://raw.github.com/emuy/template/master/.gitignore'
 
+# Use Google Map
+if yes?("Use Google Map?")
+  # set Google Map
+  gem 'gmaps4rails'
+  gem 'geocoder'
+
+  # install gems
+  run 'bundle install'
+
+  # set
+  run 'wget -O underscore.js http://underscorejs.org/underscore-min.js -P app/assets/javascripts/'
+end
+
 # git init
 # ----------------------------------------------------------------
 git :init
