@@ -62,7 +62,7 @@ group :development, :test do
   gem 'rake_shared_context'
 
   # fixtureの代わり
-  gem "factory_girl_rails"
+  gem 'factory_girl_rails'
 
   # テスト環境のテーブルをきれいにする
   gem 'database_rewinder'
