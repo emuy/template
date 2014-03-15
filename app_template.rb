@@ -198,7 +198,7 @@ def data_entry(file_path)
     record = model.new
 
     if Rails.env.to_s == 'development'
-      record.send('id=',dev_count)
+      record.send('id=',row.count)
     end
 
     header.each_with_index do |column,index|
