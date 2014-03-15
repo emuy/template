@@ -71,6 +71,9 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'guard-spring'
 
+  # Error見やすく
+  gem 'better_errors'
+
 end
 
 CODE
