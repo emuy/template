@@ -184,7 +184,7 @@ table_names = %w()
 
 def data_entry(file_path)
   #モデル名に変換
-  model_name = File::basename(file_path).sub(/.csv$/,"").singularize.camelize
+  model_name = File::basename(file_path).sub(/.csv$/,\"\").singularize.camelize
   puts file_path
   header = nil
 
