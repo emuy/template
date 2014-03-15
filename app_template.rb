@@ -4,6 +4,8 @@
 # add to Gemfile
 append_file 'Gemfile', <<-CODE
 
+gem 'debugger', group: [:development, :test]
+
 # turbolinks support
 gem 'jquery-turbolinks'
 
