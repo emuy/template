@@ -246,8 +246,15 @@ if yes?("Use Google Map?")
   # install gems
   run 'bundle install'
 
-  # set
+  # set underscore.js
   run 'wget -O underscore.js http://underscorejs.org/underscore-min.js -P app/assets/javascripts/'
+
+  # set application.js
+  insert_into_file 'app/assets/javascripts/application.js', "\n//= require underscore", after: "//= require turbolinks"
+  insert_into_file 'app/assets/javascripts/application.js', "\n//= require gmaps/google", after: "//= require underscore"
+
+  # set _google_map.html.haml
+  run 'wget https://raw.github.com/emuy/template/master/_google_map.html.haml -P app/views/layouts/'
 end
 
 # git init
