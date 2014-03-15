@@ -227,6 +227,9 @@ data_entry(file_path)
 end
 EOF"
 
+# set .ruby-version
+run 'wget https://raw.github.com/emuy/template/master/.ruby-version'
+
 # set .gitignore
 run 'rm .gitignore'
 run 'wget https://raw.github.com/emuy/template/master/.gitignore'
