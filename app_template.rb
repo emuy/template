@@ -257,7 +257,7 @@ if yes?("Use Google Map?")
   run 'wget https://raw.github.com/emuy/template/master/_google_map.html.haml -P app/views/layouts/'
 
   # add _google_map.html.haml at application.html.haml
-  insert_into_file 'app/views/layouts/application.html.haml', "\n= render 'layouts/google_map'", after: "= javascript_include_tag \"application\", \"data-turbolinks-track\" => true"
+  insert_into_file 'app/views/layouts/application.html.haml', "\n    = render 'layouts/google_map'", after: "= javascript_include_tag \"application\", \"data-turbolinks-track\" => true"
 end
 
 # git init
