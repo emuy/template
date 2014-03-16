@@ -1,9 +1,9 @@
 template
 ========
 
-# use google map (sample) #####
+## use google map (sample) #####
 
-## controller
+### controller
 
     @hash = Gmaps4rails.build_markers(@users) do |user, marker|
       marker.lat user.latitude
@@ -12,12 +12,12 @@ template
       marker.json({name: user.name})
     end
 
-## model
+### model
 
     geocoded_by :address
     after_validation :geocode
 
-## view
+### view
 
     :javascript
       handler = Gmaps.build('Google');
@@ -30,4 +30,4 @@ template
     });
 
     %style{:width => '800px'}
-      #map{:style=>"width:800px; height:400px;"}`
+      #map{:style=>"width:800px; height:400px;"}
