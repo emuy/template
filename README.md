@@ -30,4 +30,4 @@ template
   });
 
 `%style{:width => '800px'}`
-  #map{:style=>"width:800px; height:400px;"}
+  `#map{:style=>"width:800px; height:400px;"}`
