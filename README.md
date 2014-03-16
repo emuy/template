@@ -29,5 +29,5 @@ template
     handler.fitMapToBounds();
   });
 
-'%style{:width => '800px'}'
+`%style{:width => '800px'}`
   #map{:style=>"width:800px; height:400px;"}
