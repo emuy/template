@@ -19,7 +19,7 @@ template
   
 3. view
 
-:javascript  
+:javascript
   handler = Gmaps.build('Google');
   handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
     markers = handler.addMarkers(
@@ -29,5 +29,5 @@ template
     handler.fitMapToBounds();
   });
 
-%style{:width => '800px'}
+'%style{:width => '800px'}'
   #map{:style=>"width:800px; height:400px;"}
