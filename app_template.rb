@@ -1,8 +1,8 @@
 # アプリ名の取得
 @app_name = app_name
 
-# set .ruby-version
-run 'wget https://raw.github.com/emuy/template/master/.ruby-version'
+# select ruby-version (rbenv)
+run 'rbenv shell 2.0.0-p353'
 
 # add to Gemfile
 append_file 'Gemfile', <<-CODE
@@ -232,6 +232,9 @@ data_entry(file_path)
   end
 end
 EOF"
+
+# set .ruby-version
+run 'wget https://raw.github.com/emuy/template/master/.ruby-version'
 
 # set .gitignore
 run 'rm .gitignore'
