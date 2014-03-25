@@ -1,9 +1,6 @@
 # アプリ名の取得
 @app_name = app_name
 
-# select ruby-version (rbenv)
-run 'rbenv shell 2.0.0-p353'
-
 # add to Gemfile
 append_file 'Gemfile', <<-CODE
 
