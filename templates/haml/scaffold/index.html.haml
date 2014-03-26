@@ -17,9 +17,9 @@
 <% attributes.reject(&:password_digest?).each do |attribute| -%>
         %td= <%= singular_table_name %>.<%= attribute.name %>
 <% end -%>
-        %td= link_to 'Show', <%= singular_table_name %>
-        %td= link_to 'Edit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>)
-        %td= link_to 'Destroy', <%= singular_table_name %>, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to t('cap.show'), <%= singular_table_name %>
+        %td= link_to t('cap.edit'), edit_<%= singular_table_name %>_path(<%= singular_table_name %>)
+        %td= link_to t('cap.destroy'), <%= singular_table_name %>, method: :delete, data: { confirm: t('msg.destroy_check') }
 
 %br
 

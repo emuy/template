@@ -9,3 +9,9 @@ ja:
     back: '戻る'
     show: '詳細'
     update: '更新'
+
+  msg:
+    save_ok: '保存しました。'
+    update: '更新しました。'
+    destroy_check: '削除しますか？'
+    deleted: '削除しました。'
