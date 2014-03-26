@@ -240,6 +240,11 @@ run 'wget https://raw.github.com/emuy/template/master/lib/generators/haml/scaffo
 run 'wget https://raw.github.com/emuy/template/master/templates/rails/controller/controller.rb -P lib/templates/rails/controller/'
 run 'wget https://raw.github.com/emuy/template/master/templates/rails/helper/helper.rb -P lib/templates/rails/helper/'
 run 'wget https://raw.github.com/emuy/template/master/templates/rails/scaffold_controller/controller.rb -P lib/templates/rails/scaffold_controller/'
+# Setting custom scaffold (Views)
+run 'wget https://raw.github.com/emuy/template/master/templates/haml/scaffold/edit.html.haml -P lib/templates/haml/scaffold/'
+run 'wget https://raw.github.com/emuy/template/master/templates/haml/scaffold/index.html.haml -P lib/templates/haml/scaffold/'
+run 'wget https://raw.github.com/emuy/template/master/templates/haml/scaffold/new.html.haml -P lib/templates/haml/scaffold/'
+run 'wget https://raw.github.com/emuy/template/master/templates/haml/scaffold/show.html.haml -P lib/templates/haml/scaffold/'
 
 # set .ruby-version
 run 'wget https://raw.github.com/emuy/template/master/.ruby-version'
