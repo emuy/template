@@ -234,7 +234,7 @@ EOF"
 # ==================================================
 run "mkdir -p lib/generators/haml/scaffold"
 run "mkdir -p lib/templates/rails/controller"
-run "mkdir -p lib/templates/rails/helpler"
+run "mkdir -p lib/templates/rails/helper"
 run "mkdir -p lib/templates/rails/scaffold_controller"
 run 'wget https://raw.github.com/emuy/template/master/lib/generators/haml/scaffold/scaffold_generator.rb -P lib/generators/haml/scaffold/'
 run 'wget https://raw.github.com/emuy/template/master/templates/rails/controller/controller.rb -P lib/templates/rails/controller/'
