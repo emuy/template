@@ -25,7 +25,7 @@ class <%= controller_class_name %>Controller < ApplicationController
     @<%= singular_table_name %> = <%= orm_class.build(class_name, "#{singular_table_name}_params") %>
 
 if @<%= orm_instance.save %>
-      redirect_to @<%= singular_table_name %>, notice: <%= "'#{human_name} was successfully created.'" %>
+      redirect_to @<%= singular_table_name %>, notice: t('msg.save_ok')
     else
       render action: 'new'
     end
@@ -33,7 +33,7 @@ if @<%= orm_instance.save %>
 
   def update
     if @<%= orm_instance.update("#{singular_table_name}_params") %>
-    redirect_to @<%= singular_table_name %>, notice: <%= "'#{human_name} was successfully updated.'" %>
+    redirect_to @<%= singular_table_name %>, notice: t('msg.update')
 else
   render action: 'edit'
 end
@@ -41,7 +41,7 @@ end
 
 def destroy
   @<%= orm_instance.destroy %>
-    redirect_to <%= index_helper %>_url, notice: <%= "'#{human_name} was successfully destroyed.'" %>
+    redirect_to <%= index_helper %>_url, notice: t('msg.deleted')
   end
 
   private
