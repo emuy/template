@@ -237,9 +237,9 @@ run "mkdir -p lib/templates/rails/controller"
 run "mkdir -p lib/templates/rails/helpler"
 run "mkdir -p lib/templates/rails/scaffold_controller"
 run 'wget https://raw.github.com/emuy/template/master/lib/generators/haml/scaffold/scaffold_generator.rb -P lib/generators/haml/scaffold/'
-run 'wget https://raw.github.com/emuy/template/templates/rails/controller/controller.rb -P lib/templates/rails/controller/'
-run 'wget https://raw.github.com/emuy/template/templates/rails/helper/helper.rb -P lib/templates/rails/helper/'
-run 'wget https://raw.github.com/emuy/template/templates/rails/scaffold_controller/controller.rb -P lib/templates/rails/scaffold_controller/'
+run 'wget https://raw.github.com/emuy/template/master/templates/rails/controller/controller.rb -P lib/templates/rails/controller/'
+run 'wget https://raw.github.com/emuy/template/master/templates/rails/helper/helper.rb -P lib/templates/rails/helper/'
+run 'wget https://raw.github.com/emuy/template/master/templates/rails/scaffold_controller/controller.rb -P lib/templates/rails/scaffold_controller/'
 
 # set .ruby-version
 run 'wget https://raw.github.com/emuy/template/master/.ruby-version'
