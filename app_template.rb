@@ -269,9 +269,7 @@ if yes?("Use Google Map?")
   run 'bundle install'
 
   # set underscore.js
-  run 'wget -P app/javascripts/underscore.js http://underscorejs.org/underscore-min.js'
-  #run 'wget -O underscore.js http://underscorejs.org/underscore-min.js -P app/assets/javascripts/'
-  #run 'wget -O app/assets/javascripts/underscore.js http://underscorejs.org/underscore-min.js -P'
+  run 'wget -O app/assets/javascripts/underscore.js http://underscorejs.org/underscore-min.js'
 
   # set application.js
   insert_into_file 'app/assets/javascripts/application.js', "\n//= require underscore", after: "//= require turbolinks"
