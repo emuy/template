@@ -245,6 +245,9 @@ run 'wget https://raw.github.com/emuy/template/master/templates/haml/scaffold/ed
 run 'wget https://raw.github.com/emuy/template/master/templates/haml/scaffold/index.html.haml -P lib/templates/haml/scaffold/'
 run 'wget https://raw.github.com/emuy/template/master/templates/haml/scaffold/new.html.haml -P lib/templates/haml/scaffold/'
 run 'wget https://raw.github.com/emuy/template/master/templates/haml/scaffold/show.html.haml -P lib/templates/haml/scaffold/'
+# delete _form.html.haml
+run 'rm lib/templates/haml/scaffold/_form.html.haml'
+run 'wget https://raw.github.com/emuy/template/master/templates/haml/scaffold/_form.html.haml -P lib/templates/haml/scaffold/'
 
 # set .ruby-version
 run 'wget https://raw.github.com/emuy/template/master/.ruby-version'

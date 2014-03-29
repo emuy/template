@@ -1,0 +1,10 @@
+= simple_form_for(@<%= singular_table_name %>) do |f|
+  = f.error_notification
+
+<% attributes.reject(&:password_digest?).each do |attribute| -%>
+  .form-inputs
+    = f.input :<%= attribute.human_name %>
+<% end -%>
+
+  .form-actions
+    = f.button :submit, t('cap.create')
