@@ -249,6 +249,9 @@ run 'wget https://raw.github.com/emuy/template/master/templates/haml/scaffold/sh
 run 'rm lib/templates/haml/scaffold/_form.html.haml'
 run 'wget https://raw.github.com/emuy/template/master/templates/haml/scaffold/_form.html.haml -P lib/templates/haml/scaffold/'
 
+# set application_controller.rb
+insert_into_file 'app/assets/controller/application_controller.rb', "# coding: utf-8\n", before: "class ApplicationController < ActionController::Base"
+
 # set .ruby-version
 run 'wget https://raw.github.com/emuy/template/master/.ruby-version'
 
