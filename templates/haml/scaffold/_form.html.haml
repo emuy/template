@@ -3,7 +3,7 @@
 
 <% attributes.reject(&:password_digest?).each do |attribute| -%>
   .form-inputs
-    = f.input :<%= attribute.human_name %>
+    = f.input :<%= attribute.name %>
 <% end -%>
 
   .form-actions
